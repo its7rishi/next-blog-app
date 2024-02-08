@@ -1,5 +1,6 @@
 import { fetchSingleBlog } from "@/actions/actions";
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogDetail = async ({ params }) => {
   const id = params?.id;
@@ -33,6 +34,13 @@ const BlogDetail = async ({ params }) => {
         <p className="text-center text-gray-300 my-2 mx-2 px-2 py-2">
           {blog?.description}
         </p>
+
+        <Link
+          className="text-gray-600 bg-gray-200 border-2 rounded-lg border-gray-400 shadow-sm mx-2 px-2 py-2"
+          href={`/blogs/update-blog/${blog?.id}`}
+        >
+          Update Blog
+        </Link>
       </div>
     </div>
   );

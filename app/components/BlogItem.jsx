@@ -13,8 +13,8 @@ const BlogItem = ({ blog }) => {
             loading="lazy"
             quality={100}
             src={imageUrl}
-            width={600}
-            height={400}
+            width="600"
+            height="400"
             className="w-full h-[200px] lg:h-[250px] object-cover mb-4 rounded-md"
           />
         ) : null}
@@ -27,7 +27,7 @@ const BlogItem = ({ blog }) => {
       <p className="mb-2 max-w-md text-green-500 inline-block border-2 p-2 border-green-300 rounded-full">
         {category}
       </p>
-      <p className="text-gray-epp">{description}</p>
+      <p className="text-gray-epp">{description.slice(0, 100)}...</p>
     </div>
   );
 };

@@ -13,6 +13,7 @@ const BlogItem = ({ blog }) => {
             loading="lazy"
             quality={100}
             src={imageUrl}
+            alt={blog?.title}
             width="600"
             height="400"
             className="w-full h-[200px] lg:h-[250px] object-cover mb-4 rounded-md"

@@ -1,4 +1,6 @@
 import { fetchSingleBlog } from "@/actions/actions";
+import { CommentListings } from "@/app/components/CommentListings";
+import CommentAddForm from "@/app/components/forms/CommentAddForm";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,6 +43,14 @@ const BlogDetail = async ({ params }) => {
         >
           Update Blog
         </Link>
+      </div>
+
+      <div>
+        <CommentAddForm blogId={id} />
+      </div>
+
+      <div>
+        <CommentListings blogId={id} />
       </div>
     </div>
   );
